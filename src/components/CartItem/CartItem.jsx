@@ -9,12 +9,11 @@ export default function CartItem({ item }) {
   }
 
   function deductQuantity() {
-    console.log('remove item', item)
     dispatch(cartActions.removeItem(item))
   }
 
   return (
-    <li style={{ border: '1px solid red' }}>
+    <li>
       <div>
         id: {item.id}
         {item.title} - ${item.price}

@@ -10,7 +10,6 @@ export default function ProductsList() {
     const fetchProducts = async () => {
       try {
         const response = await getProducts({ limit: 10, offset: 0 })
-        console.log('Fetched products:', response)
         setProducts(response.data.products || [])
       } catch (error) {
         console.error('Error fetching products:', error)
@@ -22,8 +21,6 @@ export default function ProductsList() {
 
   return (
     <div className='products-list'>
-      <h2>Products List</h2>
-      <p>This is where the products will be displayed.</p>
       <ul>
         {products.map(product => {
           return (
