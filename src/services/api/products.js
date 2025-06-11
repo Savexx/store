@@ -2,7 +2,7 @@ import api from './axiosConfig'
 
 export const getProducts = async params => {
   try {
-    const response = await api.get('/products', {
+    const response = await api.get('/products/category/mens-shirts', {
       params,
     })
 
