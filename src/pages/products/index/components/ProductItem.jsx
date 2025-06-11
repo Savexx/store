@@ -21,6 +21,7 @@ export default function ProductItem({ product }) {
     }
     let newItem = { ...product, size: selectedSize }
     dispatch(cartActions.addItem(newItem))
+    setSelectedSize(null)
     setOpen(true)
   }
 
