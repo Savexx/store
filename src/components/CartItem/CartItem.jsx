@@ -28,6 +28,7 @@ export default function CartItem({ item }) {
       </div>
       <p>size: {item.size}</p>
       <p>price: {item.price}</p>
+      <p>subtotal: {item.price * item.quantity}</p>
       <div stlye={{ display: 'flex', gap: '10px' }}>
         <div>Remove Item</div>
       </div>
