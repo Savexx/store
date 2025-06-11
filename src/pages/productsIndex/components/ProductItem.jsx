@@ -1,6 +1,7 @@
 import { cartActions } from '../../../store/cartSlice'
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function ProductItem({ product }) {
   const dispatch = useDispatch()
@@ -21,7 +22,9 @@ export default function ProductItem({ product }) {
 
   return (
     <div className='product-item'>
-      <h3>{product.title}</h3>
+      <h3>
+        <Link to={`/products/${product.id}`}>{product.title}</Link>
+      </h3>
       <p>{product.description}</p>
       <p>Price: ${product.price}</p>
       <img
