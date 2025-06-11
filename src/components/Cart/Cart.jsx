@@ -1,15 +1,7 @@
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 
-import {
-  Drawer,
-  AppBar,
-  Button,
-  Container,
-  Box,
-  IconButton,
-  Badge,
-} from '@mui/material'
+import { Drawer, AppBar, Container, Box, Badge } from '@mui/material'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 
 import CartItem from '../CartItem/CartItem'
