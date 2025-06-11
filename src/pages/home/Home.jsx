@@ -1,12 +1,11 @@
-import ProductsList from './components/ProductsList.jsx'
+import { Outlet } from 'react-router-dom'
 import Cart from '../../components/Cart/Cart.jsx'
 
 function Home() {
   return (
     <>
       <Cart />
-      Home Page
-      <ProductsList />
+      <Outlet />
     </>
   )
 }
