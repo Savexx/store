@@ -12,3 +12,13 @@ export const getProducts = async params => {
     throw error
   }
 }
+
+export const getProductById = async id => {
+  try {
+    const response = await api.get(`/products/${id}`)
+    return response
+  } catch (error) {
+    console.error('Error fetching product by ID:', error)
+    throw error
+  }
+}
