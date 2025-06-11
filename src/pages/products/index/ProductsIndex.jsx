@@ -2,8 +2,7 @@ import ProductsList from './components/ProductsList.jsx'
 
 export default function ProductsIndex() {
   return (
-    <div>
-      List
+    <div style={{ paddingBlock: '20px' }}>
       <ProductsList />
     </div>
   )

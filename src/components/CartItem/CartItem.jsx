@@ -9,12 +9,11 @@ export default function CartItem({ item }) {
   }
 
   function deductQuantity() {
-    console.log('remove item', item)
     dispatch(cartActions.removeItem(item))
   }
 
   return (
-    <li style={{ border: '1px solid red' }}>
+    <li>
       <div>
         id: {item.id}
         {item.title} - ${item.price}
@@ -29,6 +28,7 @@ export default function CartItem({ item }) {
       </div>
       <p>size: {item.size}</p>
       <p>price: {item.price}</p>
+      <p>subtotal: {item.price * item.quantity}</p>
       <div stlye={{ display: 'flex', gap: '10px' }}>
         <div>Remove Item</div>
       </div>

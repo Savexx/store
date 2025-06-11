@@ -1,8 +1,11 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { ThemeProvider } from '@mui/material/styles'
+
+import theme from './pages/config/theme.js'
 
 import Home from './pages/home/Home.jsx'
-import ProductsIndex from './pages/productsIndex/ProductsIndex.jsx'
-import Product from './pages/product/Product.jsx'
+import ProductsIndex from './pages/products/index/ProductsIndex.jsx'
+import Product from './pages/products/show/Product.jsx'
 
 import './App.css'
 
@@ -24,7 +27,11 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  return <RouterProvider router={router} />
+  return (
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  )
 }
 
 export default App
