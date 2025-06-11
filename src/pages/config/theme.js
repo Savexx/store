@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material'
 
-const mode = true
+const mode = false
 
 const theme = createTheme({
   palette: {
