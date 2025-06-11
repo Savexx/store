@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getProducts } from '../../../services/api/products.js'
+import { getProducts } from '../../../../services/api/products.js'
 
 import ProductItem from './ProductItem.jsx'
 

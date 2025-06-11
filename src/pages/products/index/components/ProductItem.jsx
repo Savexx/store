@@ -1,4 +1,4 @@
-import { cartActions } from '../../../store/cartSlice'
+import { cartActions } from '../../../../store/cartSlice.js'
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
