@@ -37,11 +37,15 @@ export default function Cart() {
         <Box sx={{ width: '100vw', padding: '20px', maxWidth: '300px' }}>
           <h1>My Cart</h1>
           {hasItems ? (
-            <ul>
-              {items.map((item, index) => (
-                <CartItem key={`${item.id}-${index}`} item={item} />
-              ))}
-            </ul>
+            <>
+              <ul>
+                {items.map((item, index) => (
+                  <CartItem key={`${item.id}-${index}`} item={item} />
+                ))}
+              </ul>
+              TOTAL: $
+              {items.reduce((acc, item) => acc + item.price * item.quantity, 0)}
+            </>
           ) : (
             <p>Your cart is empty.</p>
           )}
